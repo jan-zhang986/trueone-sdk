@@ -1,14 +1,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="aegis-sdk",
-    version="1.1.0",
-    description="Aegis Test as Code SDK for Pytest and Python Testing Projects",
-    author="Aegis Team",
+    name="trueone-sdk",
+    version="1.2.0",
+    description="TrueOne Test as Code SDK for Pytest and Python Testing Projects",
+    author="TrueOne Team",
     packages=find_packages(),
     python_requires=">=3.8",
+    install_requires=[
+        "pyyaml>=5.3",
+    ],
     entry_points={
         "pytest11": [
+            "trueone = aegis.plugin",
             "aegis = aegis.plugin",
         ],
     },
